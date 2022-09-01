@@ -2,7 +2,7 @@
   parent: Clothing
   id: ClothingBackpackSatchel
   name: satchel
-  description: A trendy looking satchel.
+  description: A light satchel, doesn't store as much as a backpack.
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/satchel.rsi
@@ -14,7 +14,7 @@
     slots:
     - back
   - type: Storage
-    capacity: 100
+    capacity: 125
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
