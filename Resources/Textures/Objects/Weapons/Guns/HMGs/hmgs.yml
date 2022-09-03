@@ -5,6 +5,10 @@
   description: Spray and pray
   abstract: true
   components:
+  - type: BallisticAmmoProvider
+    autoCycle: false
+    capacity: 200
+    proto: MagazineBoxMinigun
   - type: Sprite
     netsync: false
   - type: Item
@@ -40,7 +44,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeHeavyRifle
+            - CartridgeMinigun
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
