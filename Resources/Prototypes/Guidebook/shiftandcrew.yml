@@ -1,0 +1,9 @@
+﻿- type: guideEntry
+  id: CharacterCreation
+  name: Character Creation
+  text: "/Server Info/Guidebook/CharacterCreation.txt"
+
+- type: guideEntry
+  id: Survival
+  name: Survival
+  text: "/Server Info/Guidebook/Survival.txt"

@@ -5,16 +5,16 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.ContentPack;
 
-namespace Content.Client._00OuterRim.Guidebook;
+namespace Content.Client.Guidebook;
 
 [GenerateTypedNameReferences]
-public sealed partial class OuterRimGuideWindow : FancyWindow
+public sealed partial class GuidebookWindow : FancyWindow
 {
     [Dependency] private readonly IResourceManager _resourceManager = default!;
 
     private List<GuideEntry> _entries = new();
 
-    public OuterRimGuideWindow()
+    public GuidebookWindow()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);

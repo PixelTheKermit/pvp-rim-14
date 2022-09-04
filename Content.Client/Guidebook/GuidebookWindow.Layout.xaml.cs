@@ -1,12 +1,12 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
+using Content.Client.EscapeMenu.UI;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Utility;
 
-namespace Content.Client._00OuterRim.Guidebook;
+namespace Content.Client.Guidebook;
 
-public sealed partial class OuterRimGuideWindow
+public sealed partial class GuidebookWindow
 {
     private void LayoutGuidebook(string inputData, Control initialParent)
     {
@@ -58,7 +58,12 @@ public sealed partial class OuterRimGuideWindow
                         {
                             HorizontalExpand = false
                         };
-                        rt.SetMessage(FormattedMessage.FromMarkup(buffer.ToString()));
+                        var msg = new FormattedMessage();
+                        // THANK YOU RICHTEXT VERY COOL
+                        msg.PushColor(Color.White);
+                        msg.AddMarkup(buffer.ToString());
+                        msg.Pop();
+                        rt.SetMessage(msg);
                         parentStack[^1].AddChild(rt);
                         break;
                     }
@@ -99,7 +104,7 @@ public sealed partial class OuterRimGuideWindow
             {
                 if (args.Length > 3 || args.Length < 2)
                 {
-                    Logger.Warning($"`{{|` directive didn't get expected arguments, see {directive}");
+                    Logger.Warning($"`{{#` directive didn't get expected arguments, see {directive}");
                     break;
                 }
 
@@ -152,8 +157,7 @@ public sealed partial class OuterRimGuideWindow
                 control = parentStack.Pop();
                 return;
             }
-            case "embedEntityCaption":
-            case "embedEntity":
+            case var _ when args[0].StartsWith("embedEntity"):
             {
                 if (args.Length != 2 && args.Length != 3 && args.Length != 4)
                 {
@@ -163,12 +167,22 @@ public sealed partial class OuterRimGuideWindow
 
                 var ent = args[1];
                 var scale = args.Length >= 2 ? float.Parse(args[2]) : 1.0f;
-                control = new GuideEntityEmbed(ent, args[0] == "embedEntityCaption")
+                control = new GuideEntityEmbed(ent, args[0].Contains("Caption"), args[0].Contains("Interactive"))
                 {
                     HorizontalAlignment = HAlignment.Center,
                     Scale = new Vector2(scale, scale),
                     HorizontalExpand = args.Length >= 4 ? bool.Parse(args[3]) : false,
                 };
+                return;
+            }
+            case "controlsButton":
+            {
+                var button = new Button()
+                {
+                    Text = Loc.GetString("ui-info-button-controls"),
+                };
+                button.OnPressed += _ => new OptionsMenu().Open();
+                control = button;
                 return;
             }
             default:
