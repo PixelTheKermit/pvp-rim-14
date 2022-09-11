@@ -50,3 +50,14 @@
   components:
   - type: CartridgeAmmo
     proto: BulletPistolRubber
+
+- type: entity
+  id: CartridgePistolLuger
+  name: cartridge (9mm Parabellum)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+      - CartridgePistolLuger
+  - type: CartridgeAmmo
+    proto: BulletPistolLuger

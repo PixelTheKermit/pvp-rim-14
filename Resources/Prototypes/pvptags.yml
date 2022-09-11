@@ -4,3 +4,9 @@
 
 - type: Tag
   id: MagazineBoxMinigun
+
+- type: Tag
+  id: MagazinePistolLuger
+
+- type: Tag
+  id: CartridgePistolLuger
