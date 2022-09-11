@@ -241,7 +241,7 @@ namespace Content.Shared.CCVar
             CVarDef.Create("game.allow_respawns", true, CVar.REPLICATED | CVar.SERVER);
 
         public static readonly CVarDef<float> RespawnTime =
-            CVarDef.Create("game.respawn_time", 60.0f, CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("game.respawn_time", 300.0f, CVar.REPLICATED | CVar.SERVER);
 
 #if EXCEPTION_TOLERANCE
         /// <summary>

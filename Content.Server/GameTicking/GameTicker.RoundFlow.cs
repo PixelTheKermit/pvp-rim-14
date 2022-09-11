@@ -187,7 +187,7 @@ namespace Content.Server.GameTicking
 
         public bool PurchaseAvailable()
         {
-            return _stationSystem.Stations.Count() < 128;
+            return true;
         }
 
 
