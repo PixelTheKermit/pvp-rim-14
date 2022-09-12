@@ -183,6 +183,8 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/luger.rsi
+  - type: Item
+    size: 5
   - type: Gun
     fireRate: 2
     soundGunshot:

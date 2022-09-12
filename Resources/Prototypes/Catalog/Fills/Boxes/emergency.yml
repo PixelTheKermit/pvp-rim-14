@@ -10,7 +10,7 @@
       - id: EmergencyOxygenTankFilled
       - id: SpaceMedipen
       - id: EmergencyMedipen
-      - id: Flare
+      - id: WeaponPistolLuger
       - id: FoodTinMRE
       - id: CrowbarRed
   - type: Item
