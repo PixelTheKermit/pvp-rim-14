@@ -1,4 +1,4 @@
-﻿<fw:FancyWindow xmlns:fw="clr-namespace:Content.Client.UserInterface"
+<fw:FancyWindow xmlns:fw="clr-namespace:Content.Client.UserInterface.Controls"
                 xmlns="https://spacestation14.io"
                 xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
                 MinSize="270 130"

@@ -1,5 +1,5 @@
 <userInterface:FancyWindow
-    xmlns:userInterface="clr-namespace:Content.Client.UserInterface"
+    xmlns:userInterface="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns="https://spacestation14.io"
     xmlns:ui="clr-namespace:Content.Client.HUD.UI"
     xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls"

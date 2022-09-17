@@ -102,6 +102,8 @@
       node: Firelock
     - type: WallMount
       arc: 360
+    - type: StaticPrice
+      price: 150
 
 - type: entity
   id: FirelockGlass
@@ -155,3 +157,5 @@
       occludes: false
     - type: Physics
       canCollide: false
+    - type: StaticPrice
+      price: 100
