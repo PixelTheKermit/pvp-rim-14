@@ -718,7 +718,7 @@ entities:
       - 0
       - 0
     type: GridAtmosphere
-  - id: ISVCobble
+  - id: IsvSpider
     type: BecomesStation
 - uid: 4
   type: WallReinforced
