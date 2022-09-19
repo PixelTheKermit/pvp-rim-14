@@ -11,7 +11,9 @@
       - id: SpaceMedipen
       - id: EmergencyMedipen
       - id: WeaponPistolLuger
-      - id: FoodTinMRE
+      - id: MagazinePistolLuger
+      - id: MagazinePistolLuger
+      - id: MagazinePistolLuger
       - id: CrowbarRed
   - type: Item
     size: 41
