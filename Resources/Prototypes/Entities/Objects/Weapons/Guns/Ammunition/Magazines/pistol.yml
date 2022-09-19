@@ -329,6 +329,8 @@
       - MagazinePistolLuger
   - type: BallisticAmmoProvider
     proto: CartridgePistolLuger
+  - type: Item
+    size: 1
   - type: Sprite
     netsync: false
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/luger_mag.rsi
