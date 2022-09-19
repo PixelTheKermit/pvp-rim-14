@@ -186,7 +186,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/luger.rsi
   - type: Item
-    size: 1
+    size: 5
   - type: Gun
     fireRate: 2
     soundGunshot:

@@ -58,6 +58,8 @@
   name: cartridge (9mm Parabellum)
   parent: BaseCartridgePistol
   components:
+  - type: Item
+    size: 1
   - type: Tag
     tags:
       - CartridgePistolLuger
