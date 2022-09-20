@@ -182,7 +182,6 @@ namespace Content.Shared.MobState.EntitySystems
         {
             switch (component.CurrentState)
             {
-                case DamageState.Critical:
                 case DamageState.Dead:
                     args.Cancel();
                     return;

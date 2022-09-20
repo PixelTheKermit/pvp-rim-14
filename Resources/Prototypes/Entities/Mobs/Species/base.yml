@@ -252,8 +252,12 @@
           - !type:GibBehavior { }
   - type: SlowOnDamage
     speedModifierThresholds:
-      60: 0.7
-      80: 0.5
+      70: 0.8
+      80: 0.6
+      90: 0.4
+      100: 0.25
+      125: 0.1
+      150: 0.0
   - type: HeatResistance
   - type: DamageVisuals
     thresholds: [ 20, 40, 100 ]
