@@ -1,4 +1,4 @@
-﻿using Content.Server.Gravity.EntitySystems;
+using Content.Server.Gravity.EntitySystems;
 using Content.Shared.Gravity;
 
 namespace Content.Server.Gravity
@@ -31,7 +31,7 @@ namespace Content.Server.Gravity
         public bool Intact { get; set; } = true;
 
         // 0 -> 1
-        [ViewVariables(VVAccess.ReadWrite)] [DataField("charge")] public float Charge { get; set; } = 1;
+        [ViewVariables(VVAccess.ReadWrite)] [DataField("charge")] public float Charge { get; set; } = 0;
 
         /// <summary>
         /// Is the gravity generator currently "producing" gravity?

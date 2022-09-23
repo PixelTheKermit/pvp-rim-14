@@ -25,6 +25,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Content.Server._00OuterRim.Worldgen.Systems.Overworld;
 using Robust.Shared.Players;
+using System.Security.AccessControl;
+using System;
 
 namespace Content.Server.GameTicking
 {
@@ -109,7 +111,11 @@ namespace Content.Server.GameTicking
                     var mid = _mapManager.GetMapEntityId(DefaultMap);
                     xform.Coordinates = new EntityCoordinates(mid, offs);
                 }
-
+                var plr = shell.Player as IPlayerSession;
+                if (plr != null)
+                {
+                    MakeJoinGame(plr, _stationSystem.Stations.Last(), "Captain");
+                }
                 return;
             }
         }
@@ -162,7 +168,7 @@ namespace Content.Server.GameTicking
         /// <param name="loadOptions">Map loading options, includes offset.</param>
         /// <param name="stationName">Name to assign to the loaded station.</param>
         /// <returns>All loaded entities and grids.</returns>
-        public (IReadOnlyList<EntityUid> Entities, IReadOnlyList<EntityUid> Grids) LoadGameMap(GameMapPrototype map, MapId targetMapId,
+        public (IReadOnlyList<EntityUid>, IReadOnlyList<EntityUid>) LoadGameMap(GameMapPrototype map, MapId targetMapId,
             MapLoadOptions? loadOptions, string? stationName = null)
         {
             // Okay I specifically didn't set LoadMap here because this is typically called onto a new map.
@@ -182,7 +188,7 @@ namespace Content.Server.GameTicking
 
         public bool PurchaseAvailable()
         {
-            return _stationSystem.Stations.All(x => Comp<StationJobsComponent>(x).PercentJobsRemaining <= .5);
+            return true;
         }
 
 
