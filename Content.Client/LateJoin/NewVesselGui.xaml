@@ -1,4 +1,4 @@
-﻿<controls1:FancyWindow
+<controls1:FancyWindow
     xmlns:userInterface="clr-namespace:Content.Client.UserInterface"
     xmlns="https://spacestation14.io"
     xmlns:ui="clr-namespace:Content.Client.HUD.UI"
@@ -15,7 +15,7 @@
             <customControls:HSeparator StyleClasses="LowDivider"/>
             <ItemList Name="ShuttleList" HorizontalExpand="True" VerticalExpand="True" Margin="3 10"/>
             <BoxContainer Orientation="Horizontal" Margin="0 3" HorizontalExpand="True" HorizontalAlignment="Center">
-                <Button Name="PurchaseShipButton" Text="Purchase" Disabled="True"/>
+                <Button Name="PurchaseShipButton" Text="Purchase" Disabled="False"/>
             </BoxContainer>
         </BoxContainer>
         <customControls:VSeparator StyleClasses="LowDivider"/>

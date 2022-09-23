@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Client.Guidebook.Richtext;
 using Content.Client.UserInterface;
 using Content.Client.UserInterface.Controls;

@@ -1,4 +1,4 @@
-﻿<controls:FancyWindow xmlns:cui="clr-namespace:Content.Client.UserInterface"
+<controls:FancyWindow xmlns:cui="clr-namespace:Content.Client.UserInterface"
                  xmlns="https://spacestation14.io"
                  xmlns:lateJoin="clr-namespace:Content.Client.LateJoin"
                  xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"

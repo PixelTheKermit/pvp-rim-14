@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Content.Client.Options.UI;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;

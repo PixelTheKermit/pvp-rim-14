@@ -43,6 +43,7 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Client.Lathe;
 
 namespace Content.Client.Entry
 {

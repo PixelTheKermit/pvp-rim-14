@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using Content.Client.Options.UI;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
